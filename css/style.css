@@ -553,7 +553,7 @@ form textarea:focus {
     text-align: center;
     color: #eee;
     padding: 35px 0 35px;
-    border-top: 1px solid #888;
+    border-top: 1px solid #fff;
 }
 
 /* footer */

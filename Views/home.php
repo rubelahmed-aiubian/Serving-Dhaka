@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Serving Dhaka</title>
-	<link rel="icon" href="images/favicon.png">
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/fontawesome.min.css">
-	<link rel="stylesheet" href="css/LineIcons.css">
-	<link rel="stylesheet" href="css/fakeLoader.min.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-	<!-- loader -->
-	<div class="fakeLoader"></div>
-	<!-- end loader -->
-
-	<!-- navbar -->
-	<nav class="navbar navbar-expand-md fixed-top">
-		<div class="container">
-			<a href="index.html" class="navbar-brand"><img src="images/logo.png" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<i class="fa fa-bars"></i>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#home">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about">Our Goal</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#services">Services</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#team">Our Team</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#contact">Contact us</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- end navbar -->
-
-	<!-- home intro -->
+<?php include 'includes/header.php';?>
 	<div class="home-intro" id="home">
 		<div class="container">
 			<div class="row">
@@ -61,8 +8,8 @@
 						<h2>HIRE</h2>
 						<h2>WORKER</h2>
 						<ul>
-							<li><a href="" class="button" data-toggle="modal" data-target="#loginModal">LOG IN</a></li>
-							<li><a href="" class="button2">Get REGISTERED</a></li>
+							<li><a href="<?=url('auth/login')?>" class="button">LOG IN</a></li>
+							<li><a href="<?=url('auth/register')?>" class="button2">Get REGISTERED</a></li>
 						</ul>
 					</div>
 				</div>
@@ -74,37 +21,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end end intro -->
-
-	<!-------------login------------>
-	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel">Admin Login</h5>
-			</div>
-			<div class ="modal-body">
-				<form method="post">
-					<div class="form-group">
-						<input type="email" name="email" placeholder="example@company.com" required>
-						<input type="password" name="password" placeholder="enter password" required>
-						<input type="checkbox" id="rememberme" name="check"><label for="rememberme">Remember Me</label>
-					</div>
-
-				</form>
-			</div>
-			<div class="modal-footer">
-			  	<button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
-			  	<button type="button" class="btn btn-primary">Login</button>
-			</div>
-		  </div>
-		</div>
-	  </div>
-
-
-	<!-------------end login-------->
-
-	<!-- about -->
 	<div class="about section bg-grey" id="about">
 		<div class="container">
 			<div class="title-section">
@@ -140,9 +56,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end about -->
-
-	<!-- services -->
 	<div class="services section bg-grey" id="services">
 		<div class="container">
 			<div class="title-section">
@@ -218,9 +131,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end services -->
-
-	<!-- team -->
 	<div class="portfolio section" id="team">
 		<div class="container">
 			<div class="title-section">
@@ -237,7 +147,7 @@
 							<!-- Row -->
 							<div class="row">
 								<div class="col-md-12">
-									<img src="./Images/rubel.jpg"
+									<img src="../Images/rubel.jpg"
 										alt="wrapkit" class="img-fluid rounded-circle" />
 								</div>
 								<div class="col-md-12 text-center">
@@ -265,7 +175,7 @@
 							<!-- Row -->
 							<div class="row">
 								<div class="col-md-12">
-									<img src="./Images/usericon.png"
+									<img src="../Images/usericon.png"
 										alt="wrapkit" class="img-fluid rounded-circle" />
 								</div>
 								<div class="col-md-12 text-center">
@@ -293,7 +203,7 @@
 							<!-- Row -->
 							<div class="row">
 								<div class="col-md-12">
-									<img src="./Images/usericon.png"
+									<img src="../Images/usericon.png"
 										alt="wrapkit" class="img-fluid rounded-circle" />
 								</div>
 								<div class="col-md-12 text-center">
@@ -321,7 +231,7 @@
 							<!-- Row -->
 							<div class="row">
 								<div class="col-md-12">
-									<img src="./Images/usericon.png"
+									<img src="../Images/usericon.png"
 										alt="wrapkit" class="img-fluid rounded-circle" />
 								</div>
 								<div class="col-md-12 text-center">
@@ -348,10 +258,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end portfolio -->
-
-
-	<!-- testimonial -->
 	<div class="testimonial section bg-grey" id="testimonial">
 		<div class="container">
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -389,9 +295,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- end testimonial -->
-
-	<!-- contact -->
 	<div id="contact" class="contact section">
 		<div class="container">
 			<div class="box-content">
@@ -444,66 +347,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- end contact -->
-
-	<!-- footer -->
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-6">
-					<div class="content">
-						<div class="brand"><img src="images/logo.png" alt=""></div>
-						<p class="brand-text">Lorem ipsum dolor sit amet consectetur adipisicing elit Aliquam nam</p>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="content">
-						<h5>About</h5>
-						<ul>
-							<li><a href="#home"><i class="fa fa-angle-double-right"></i> Home</a></li>
-							<li><a href="#about"><i class="fa fa-angle-double-right"></i> Our Goal</a></li>
-							<li><a href="#contact"><i class="fa fa-angle-double-right"></i> Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="content">
-						<h5>Support</h5>
-						<ul>
-							<li><a href="mailto:support@ahmedrubel.com"><i class="fa fa-angle-double-right"></i> support@ahmedrubel.com</a></li>
-							<li><a href="tel:01309081617"><i class="fa fa-angle-double-right"></i> +880 1309081617</a></li>
-							
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="content">
-						<h5>Follow us</h5>
-						<ul class="social">
-							<li><a href=""><i class="fab fa-facebook-f"></i> Facebook</a></li>
-							<li><a href=""><i class="fab fa-twitter"></i> Twitter
-								</a></li>
-							<li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- end footer -->
-
-	<!-- footer bottom -->
-	<div class="footer-bottom">
-		<span>Copyright © All Right Reserved</span>
-	</div>
-	<!-- end footer bottom -->
-
-	<!-- script -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/fakeLoader.min.js"></script>
-	<script src="js/main.js"></script>
-
-</body>
-
-</html>
+<?php include "includes/footer.php";?>
